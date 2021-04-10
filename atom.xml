@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.521024.xyz</id>
     <title>Xoia&apos;s Blog</title>
-    <updated>2021-03-05T15:04:27.889Z</updated>
+    <updated>2021-04-10T04:05:56.274Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.521024.xyz"/>
     <link rel="self" href="https://blog.521024.xyz/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://blog.521024.xyz/images/avatar.png</logo>
     <icon>https://blog.521024.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, Xoia&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux中提示-bash: wget: command not found的解决方法]]></title>
+        <id>https://blog.521024.xyz/linux-zhong-ti-shi-bash-wget-command-not-found-de-jie-jue-fang-fa/</id>
+        <link href="https://blog.521024.xyz/linux-zhong-ti-shi-bash-wget-command-not-found-de-jie-jue-fang-fa/">
+        </link>
+        <updated>2021-04-10T04:05:04.000Z</updated>
+        <content type="html"><![CDATA[<p>Liunx系统中，-bash: wget: command not found是找不到命令的意思，也就是无法执行下载命令，主要是因为你的系统太干净了，没有安装下载命令的控制器，我们给系统安装个下载命令器即可。<br>
+CentOS系统:</p>
+<p>yum install wget -y</p>
+<p>Debian/Ubuntu系统，需要执行以下命令：</p>
+<p>apt-get install -y wget</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[待到秋来九月八 我花开后百花杀]]></title>
         <id>https://blog.521024.xyz/dai-dao-qiu-lai-jiu-yue-ba-wo-hua-kai-hou-bai-hua-sha/</id>
