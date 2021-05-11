@@ -4,7 +4,7 @@
 <meta name="description" content="Xoia'Blog，记录生活、心情、知识、笔记、创意... ..."/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="keywords" content="Xoia,酷安,APP杂货店,日常,博客,个人博客,职业资格考试,公务员考试,超星,慕课,机器人问答库,问答库">
-<title>Gridea | Xoia&#39;s Blog</title>
+<title>宝塔面板取消强制登录验证（账号密码）的办法 | Xoia&#39;s Blog</title>
 
 <link rel="shortcut icon" href="https://blog.521024.xyz/favicon.ico?v=1620740311787">
 <script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script>
@@ -25,11 +25,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
 <a href="https://blog.521024.xyz/" target="_blank">
         <img class="user-avatar" src="https://cdn.jsdelivr.net/gh/xianbaoyun/img/2021/up/ccaa8d.png" alt="头像">
@@ -87,57 +87,56 @@
     </div>
 </nav>
 
-        <div class="current-tag-container">
-            <h2 class="title gt-c-content-color-first">
-                #Gridea
-            </h2>
-        </div>
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://blog.521024.xyz/hello-Xoia&#39;Blog/">
-                            <span class="post-title gt-c-content-color-first">Hello Xoia&#39;Blog</span>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    宝塔面板取消强制登录验证（账号密码）的办法
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-05-11 ·
+                    </time>
+                    
+                        <a href="https://blog.521024.xyz/tag/AaRQHCHfy/" class="post-tags">
+                            # 服务器
                         </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>👍本站地址为 <a href="https://blog.521024.xyz">BLOG.521024.XYZ</a>   长期不改变！<br>
-👍本站基于<strong>Gridea+Github Page+CF CDN</strong>页面所搭建而成的静态博客，速度稳定！</p>
-<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2021-01-26 ·
-                        </time>
-                        
-                            <a href="https://blog.521024.xyz/tag/JidLr3E--/" class="post-tag">
-                                # Blog
-                            </a>
-                        
-                            <a href="https://blog.521024.xyz/tag/6NgKjlTWw/" class="post-tag">
-                                # Gridea
-                            </a>
-                        
-                    </div>
+                    
                 </div>
-                
-                    <a href="https://blog.521024.xyz/hello-Xoia&#39;Blog/" class="post-feature-image"
-                       style="background-image: url('https://images.acgshe.com/Store/Pc/Vuxl25.png')">
-                    </a>
-                
+                <div class="post-content">
+                    <p>初次安装并登录宝塔面板后台，登录成功后会提示输入宝塔官方账号密码，取消这个提示比较简单，只需要在SSH中输入：</p>
+<p>第一种方法：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<p>恢复登录：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'REMOVED') {|if (bind_user == 'True') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<hr>
+<p>第二种方法：</p>
+<pre><code>rm -f /www/server/panel/data/bind.pl
+</code></pre>
+<p>推荐使用第二种方法。</p>
+<p>因为我这边使用第一种没有效果！</p>
+<!-- more -->
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://blog.521024.xyz/linux-zhong-ti-shi-bash-wget-command-not-found-de-jie-jue-fang-fa/" class="post-title gt-a-link">
+                    Linux中提示-bash: wget: command not found的解决方法
+                </a>
             </div>
         
-    </div>
-</div>
-        <div class="pagination-container">
-    
-    
-</div>
+
+        
+
+        
+
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">温故而知新</div>

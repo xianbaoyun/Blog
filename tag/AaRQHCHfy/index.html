@@ -6,7 +6,7 @@
 <meta name="keywords" content="Xoia,酷安,APP杂货店,日常,博客,个人博客,职业资格考试,公务员考试,超星,慕课,机器人问答库,问答库">
 <title>服务器 | Xoia&#39;s Blog</title>
 
-<link rel="shortcut icon" href="https://blog.521024.xyz/favicon.ico?v=1618757078861">
+<link rel="shortcut icon" href="https://blog.521024.xyz/favicon.ico?v=1620740311787">
 <script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://blog.521024.xyz/styles/main.css">
@@ -79,7 +79,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1618757078861" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1620740311787" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -94,6 +94,44 @@
         </div>
         <div class="post-list-container">
     <div class="post-inner">
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://blog.521024.xyz/bt-passwd/">
+                            <span class="post-title gt-c-content-color-first">宝塔面板取消强制登录验证（账号密码）的办法</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>初次安装并登录宝塔面板后台，登录成功后会提示输入宝塔官方账号密码，取消这个提示比较简单，只需要在SSH中输入：</p>
+<p>第一种方法：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<p>恢复登录：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'REMOVED') {|if (bind_user == 'True') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<hr>
+<p>第二种方法：</p>
+<pre><code>rm -f /www/server/panel/data/bind.pl
+</code></pre>
+<p>推荐使用第二种方法。</p>
+<p>因为我这边使用第一种没有效果！</p>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2021-05-11 ·
+                        </time>
+                        
+                            <a href="https://blog.521024.xyz/tag/AaRQHCHfy/" class="post-tag">
+                                # 服务器
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
         
             <div class="post gt-bg-theme-color-second">
                 <div class="post-left">
@@ -157,7 +195,7 @@
     </div>
 <span id="busuanzi_container_site_pv">👁&nbsp;<strong><span id="busuanzi_value_site_pv"></span></strong> Views</span>&nbsp;
 <!--span id="busuanzi_container_site_uv">👦&nbsp;<strong><span id="busuanzi_value_site_uv"></strong></span> Peoples</span-->
-<span>📚&nbsp;<strong>5</strong> Posts</span>
+<span>📚&nbsp;<strong>6</strong> Posts</span>
 
     <div>
 <span>© 2021 Xoia'Blog ⋅ <a href="https://blog.521024.xyz/atom.xml" target="_blank">RSS</a><br>

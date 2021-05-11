@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.521024.xyz</id>
     <title>Xoia&apos;s Blog</title>
-    <updated>2021-04-18T14:44:41.440Z</updated>
+    <updated>2021-05-11T13:38:34.320Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.521024.xyz"/>
     <link rel="self" href="https://blog.521024.xyz/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://blog.521024.xyz/images/avatar.png</logo>
     <icon>https://blog.521024.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, Xoia&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[宝塔面板取消强制登录验证（账号密码）的办法]]></title>
+        <id>https://blog.521024.xyz/bt-passwd/</id>
+        <link href="https://blog.521024.xyz/bt-passwd/">
+        </link>
+        <updated>2021-05-11T13:35:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>初次安装并登录宝塔面板后台，登录成功后会提示输入宝塔官方账号密码，取消这个提示比较简单，只需要在SSH中输入：</p>
+<p>第一种方法：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<p>恢复登录：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'REMOVED') {|if (bind_user == 'True') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<hr>
+<p>第二种方法：</p>
+<pre><code>rm -f /www/server/panel/data/bind.pl
+</code></pre>
+<p>推荐使用第二种方法。</p>
+<p>因为我这边使用第一种没有效果！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>初次安装并登录宝塔面板后台，登录成功后会提示输入宝塔官方账号密码，取消这个提示比较简单，只需要在SSH中输入：</p>
+<p>第一种方法：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<p>恢复登录：</p>
+<pre><code>sed -i &quot;s|if (bind_user == 'REMOVED') {|if (bind_user == 'True') {|g&quot; /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<hr>
+<p>第二种方法：</p>
+<pre><code>rm -f /www/server/panel/data/bind.pl
+</code></pre>
+<p>推荐使用第二种方法。</p>
+<p>因为我这边使用第一种没有效果！</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux中提示-bash: wget: command not found的解决方法]]></title>
         <id>https://blog.521024.xyz/linux-zhong-ti-shi-bash-wget-command-not-found-de-jie-jue-fang-fa/</id>
